@@ -1,1 +1,1 @@
-Build my own calculator!
+Easy print
