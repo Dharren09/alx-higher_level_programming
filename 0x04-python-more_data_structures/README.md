@@ -1,1 +1,1 @@
-Squared simple
+Search and replace
