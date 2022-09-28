@@ -1,1 +1,1 @@
-Update dictionary
+Simple delete by key
