@@ -1,1 +1,1 @@
-Linked list palindrome
+CPython #0: Python lists
