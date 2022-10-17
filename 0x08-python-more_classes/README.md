@@ -1,1 +1,1 @@
-Simple rectangle
+N queens
