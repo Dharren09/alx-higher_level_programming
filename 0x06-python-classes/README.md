@@ -1,1 +1,1 @@
-My first square
+Compare 2 squares
