@@ -1,1 +1,1 @@
-N queens
+Real definition of a rectangle
