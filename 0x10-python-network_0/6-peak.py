@@ -2,7 +2,6 @@
 """
 this function finds a peak in a list of unsorted integers
 """
-
 def find_peak(numbr):
     '''
     Finds the peak in a list of numbers
@@ -24,4 +23,4 @@ def find_peak(numbr):
             return value
         elif idx == length - 1 and numbr[idx - 1] <= value:
             return value
-        return pick
+    return peak
