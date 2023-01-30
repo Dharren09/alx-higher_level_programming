@@ -1,9 +1,14 @@
 #!/usr/bin/node
 
-const languages = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+const args = process.argv;
 
-let lang;
+const num = parseInt(args[2]);
+let i;
 
-for (lang of languages) {
-  console.log(lang);
+if (isNaN(num)) {
+  console.log('Missing number of occurrences');
+} else {
+  for (i = 0; i < num; i++) {
+    console.log('C is fun');
+  }
 }
