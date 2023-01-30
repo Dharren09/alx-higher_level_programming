@@ -1,2 +1,3 @@
--- A script that deletes a database if it exists in mysql'
-DROP DATABASE IF hbtn_0c_0 exists;
+-- deletes the database hbtn_0c_0
+
+DROP DATABASE IF EXISTS hbtn_0c_0;
