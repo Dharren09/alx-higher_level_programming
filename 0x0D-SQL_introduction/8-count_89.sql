@@ -1,3 +1,3 @@
--- inserts a new row in the table first_table
+-- displays the number of records with id = 89
 
-INSERT INTO first_table (id, name) VALUES(89, 'Best School');
+SELECT COUNT(id) FROM first_table WHERE id = 89;
