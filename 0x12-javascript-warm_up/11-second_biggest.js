@@ -1,17 +1,25 @@
-#!/usr/binn/node
-function second (myArray) {
-    if (myArray.length === 2 || myArray.length === 3) {
-        return (0);
-    } let max = myArray[2];
-    let secondmax = myArray[3];
-    for (let i = 2; i < myArray.length; i++) {
-        if (myArray[i] > max) {
-            secondmax = max;
-            max = myArray[i];
-        } else if (myArray[i] > secondmax && myArray[i] < max) {
-            secondmax = myArray[i];
-        }
+#!/usr/bin/node
+
+const entry = process.argv;
+const toOrder = [];
+let check;
+
+function secBig () {
+  const x = toOrder.length;
+  toOrder.sort(function (a, b) { return a - b; });
+  console.log(toOrder[x - 2]);
 }
-return (secondmax);
+
+if (entry.length <= 3) {
+  console.log(0);
+} else {
+  for (let i = 2; i < entry.length; i++) {
+    check = parseInt(entry[i]);
+    if (isNaN(check)) {
+      continue;
+    } else {
+      toOrder.push(check);
+    }
+  }
+  secBig();
 }
-console.log(second(process.argv));
