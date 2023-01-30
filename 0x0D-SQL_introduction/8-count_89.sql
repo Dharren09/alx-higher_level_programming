@@ -1,2 +1,3 @@
--- A script tthat displays the number with id = 89 in the tables first_table of the database hbtn_0c_0 in your MySQL server.
-SELECT COUNT(id) first_table WHERE id = 89;
+-- inserts a new row in the table first_table
+
+INSERT INTO first_table (id, name) VALUES(89, 'Best School');
