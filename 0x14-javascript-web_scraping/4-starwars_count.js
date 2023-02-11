@@ -3,11 +3,15 @@
 // "Wedge Antilles" is present
 
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/api/films/';
+const url = process.argv[2];
 
-request.get(url, (error, response, body) => {
-	if error throw error;
+request.get(url, (err, response, body) => {
+	if (err) {
+		console.log(err);
+		return;
+	}
 	const data = JSON.parse(body);
-	filmInfo = filmInfo.filters(film => film.characters.find(character => character.match(18)));
+	let filmInfo = data.results;
+	filmInfo = filmInfo.filter(film => film.characters.find(character => character.match(18)));
 	console.log(filmInfo.length);
 });

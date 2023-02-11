@@ -1,11 +1,13 @@
 #!/usr/bin/node
-
 // write a string to a file
-const fs = requires('fs');
+const fs = require('fs');
+const file = process.argv[2];
 // string to write
-const data = 'Python is cool';
+const data = process.argv[3];
 
-fs.writeFile('my_file.txt', 'uft8', (err) => {
-	if (err) throw error;
-	console.log('Python is cool');
+fs.writeFile(file, data, (err) => {
+	if (err) {
+		console.log(err);
+		return;
+	} 
 });

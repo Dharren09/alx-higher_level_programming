@@ -1,10 +1,12 @@
 #!/usr/bin/node
-// Read and Print a file
-// fs module - provides a simple way to work with file system
+// read and print a file
 const fs = require('fs');
-const file = 'cisfun';
+const file = process.argv[2];
 
-fs.readfile('file', 'utf8', (err, data) => {
-	if (err) throw err;
-	console.log('data');
-});
+fs.readFile(file, 'utf8', (err, data) => {
+	if (err) {
+		console.log (err);
+		return;
+	}
+	console.log(data);
+}); // fs = File System, module in node.js that provides an API 

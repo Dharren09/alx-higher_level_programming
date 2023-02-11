@@ -3,10 +3,13 @@
 // number matches a given integer
 const request = require('request');
 const ID = process.argv[2];
-const url = 'https://swapi-api.alx-tools.com/api/films/:id';
+const url = 'https://swapi-api.alx-tools.com/api/films/';
 
-request(url, (error, response, body) => {
-	if (error) throw error;
+request(url + ID, (err, response, body) => {
+	if (err) {
+		console.log(err);
+		return;
+	}
 	const data = JSON.parse(body);
 	console.log(data.title);
 });
